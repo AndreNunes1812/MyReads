@@ -11,7 +11,9 @@ class ListBooks extends Component {
 
         this.handleChange =this.handleChange.bind(this)
         this.bookUpdate = this.bookUpdate.bind(this)
+        this.msg = 'Não ha livro(s) disponível'
         this.self = this 
+        
     }
 
     componentDidMount() {     
@@ -54,30 +56,34 @@ class ListBooks extends Component {
                     </div>  
                  ) : ( null) }               
                 <div className="bookshelf"> 
-                    <h2 className="bookshelf-title">{ this.props.titulo }</h2>                
-                    <ol className='books-grid'>                          
-                        {this.state.books.map((book) =>(                                
-                            <li key={book.id} >                                         
-                                <div className="book">
-                                    <div className="book-top">
-                                        <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})` }}></div>
-                                            <div className="book-shelf-changer">                                                
-                                                <select id="lang" onChange={ (e)=> onUpdateBooks(book,e.target.value) }
-                                                    value={book.shelf}>
-                                                    <option value="move" disabled>Move to...</option>
-                                                    <option value="currentlyReading">Currently Reading</option>
-                                                    <option value="wantToRead">Want to Read</option>
-                                                    <option value="read">Read</option>
-                                                    <option value="none">None</option>
-                                                </select>
+                    <h2 className="bookshelf-title">{ this.props.titulo }</h2> 
+                        <ol className='books-grid'>
+                            { this.state.books==0 ? (
+                               <h3 className="bookshelf-title">{ this.msg }</h3>      
+                            ):('') }   
+                            {this.state.books.map((book) =>(                                
+                                <li key={book.id} >                                         
+                                    <div className="book">
+                                        <div className="book-top">
+                                            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})` }}></div>
+                                                <div className="book-shelf-changer">                                                
+                                                    <select id="lang" onChange={ (e)=> onUpdateBooks(book,e.target.value) }
+                                                        value={book.shelf}>
+                                                        <option value="move" disabled>Move to...</option>
+                                                        <option value="currentlyReading">Currently Reading</option>
+                                                        <option value="wantToRead">Want to Read</option>
+                                                        <option value="read">Read</option>
+                                                        <option value="none">None</option>
+                                                    </select>
+                                                </div>
                                             </div>
+                                            <div className="book-title">{ book.title }</div>
+                                            <div className="book-authors">{ book.authors }</div>
                                         </div>
-                                        <div className="book-title">{ book.title }</div>
-                                        <div className="book-authors">{ book.authors }</div>
-                                    </div>
-                            </li>
-                        ))}
-                    </ol>
+                                </li>
+                            ))}
+                        </ol>
+                 
                 </div>
             </div>
         )
