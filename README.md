@@ -1,17 +1,20 @@
-# MyReads Project
+# Projeto MyReads
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+Este projeto atende ao primeiro modulo do **Programa Nanodegree - Desenvolvimento React**.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+## Objetivo
+
+O sistema consiste em gerenciar livros de determinadas prateleira(s), ou seja, o(s) livro(s) podem estar em *lendo atualmente*, *quero ler* ou *lido*, o sistema oferece ainda uma pesquisa avançada de livros que podem ser adcionanda a(s) prateleira(s).
 
 ## TL;DR
 
-To get started developing right away:
+Foi disponibilizado um modelo do projeto contendo informações de ###layout### e  ###css###, **Não** informando nenhum aplicabilidade sobre "REACT"
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+* Para a instalação das dependencia do projeto é necessario está dentro da pasta do projeto e      digitar `npm install`
 
-## What You're Getting
+* Para executar a aplicação: `npm start`
+
+## O Projeto MyReads oferece a seguinte estrutura:
 ```bash
 ├── CONTRIBUTING.md
 ├── README.md - This file.
@@ -33,11 +36,13 @@ To get started developing right away:
     └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
 
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
+Uma boa pratica é documentar todo(s) arquivo(s) criado(s) dentro da estrutura informada acima.
 
-## Backend Server
+## Pesquisas dos Livros
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+Para simplificar o desenvolvimento da Pesquisa de livros foi fornecida uma API **BOOKSAPI**, conforme descrita abaixo em *inglês*.
+
+We've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
 * [`getAll`](#getall)
 * [`update`](#update)
@@ -87,6 +92,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+Esté repositório é para atender os alunos da Udacity
+para maiores detalhes, clique aqui [CONTRIBUTING.md](CONTRIBUTING.md).
