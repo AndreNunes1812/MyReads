@@ -80,6 +80,8 @@ Foi disponibilizado um modelo do projeto contendo informações basicas de layou
     ├── App.js # This is the root of your app. Contains static HTML right now.
     ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
     ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
+    ├── ListBooks.js # Class showing the books on the shelf
+    ├── SearchBooks # Class that manages book searches directly from the API (BooksAPI)
     ├── icons # Helpful images for your app. Use at your discretion.
     │   ├── add.svg
     │   ├── arrow-back.svg
@@ -147,3 +149,5 @@ Este projeto foi inicializado com o [Create React App](https://github.com/facebo
 
 Esté repositório é para atender os alunos da Udacity
 para maiores detalhes, clique aqui [CONTRIBUTING.md](CONTRIBUTING.md).
+
+
