@@ -4,11 +4,23 @@ Este projeto atende ao primeiro modulo do **Programa Nanodegree - Desenvolviment
 
 ## Objetivo
 
-O sistema consiste em gerenciar livros de determinadas prateleira(s), ou seja, o(s) livro(s) podem estar em *lendo atualmente*, *quero ler* ou *lido*, o sistema oferece ainda uma pesquisa avançada de livros que podem ser adcionanda a(s) prateleira(s).
+O sistema consiste em gerenciar livros em determinadas prateleira(s), ou seja, o(s) livro(s) podem estar nos seguites tipos: **lendo atualmente**, **quero ler** ou **lido**, o sistema oferece ainda uma pesquisa avançada de livros que podem ser adcionanda a(s) prateleira(s).
 
-## TL;DR
+###Especificação do projeto:
+####    Configuração do Projeto
+        +A aplicação foi criada com o create-react-app e exige apenas o npm install e npm start para  ser instalada e iniciada (ou com yarn).
+        +Um README atualizado que descreve o projeto e tem instruções para instalar e rodar o projeto estão incluídas no README.
 
-Foi disponibilizado um modelo do projeto contendo informações de ###layout### e  ###css###, **Não** informando nenhum aplicabilidade sobre "REACT"
+####    Página principal 
+        +A página principal exibe três estantes de livros, e cada livro é mostrado na estante correta.
+        +A página principal exibe um controle que permite aos usuários mudar os livros de estante. O controle deve estar ligado a cada instância de livros. A funcionalidade de mover um livro para uma estante diferente funciona corretamente.
+        +Quando é feito refresh no navegador, a página continua exibindo as mesmas informações.
+
+
+
+## Lembrete:
+
+Foi disponibilizado um modelo do projeto contendo informações basicas de layout e css, **Não** informando nenhuma aplicabilidade sobre "REACT".
 
 * Para a instalação das dependencia do projeto é necessario está dentro da pasta do projeto e      digitar `npm install`
 
@@ -83,8 +95,9 @@ search(query)
 * Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
 * These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
 
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+## Importante
+
+A API de back-end usa um conjunto fixo de resultados de pesquisa em cache e é limitada a um conjunto específico de termos de pesquisa, que podem ser encontrados em SEARCH_TERMS.md. Essa lista de termos são os únicos termos que funcionarão com o back-end, por isso não se surpreenda se suas pesquisas por Basket Weaving ou Bubble Wrap não retornarem nenhum resultado.
 
 ## Create React App
 
