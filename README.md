@@ -8,16 +8,14 @@ O sistema consiste em gerenciar livros em determinadas prateleira(s), ou seja, o
 
 ## Especificação do projeto:
 
-## Configuração do Projeto
+### Configuração do Projeto
 A aplicação foi criada com o create-react-app e exige apenas o npm install e npm start para  ser instalada e iniciada (ou com yarn).
 Um README atualizado que descreve o projeto e tem instruções para instalar e rodar o projeto estão incluídas no README.
 
-##  Página principal 
-        +A página principal exibe três estantes de livros, e cada livro é mostrado na estante correta.
-        +A página principal exibe um controle que permite aos usuários mudar os livros de estante. O controle deve estar ligado a cada instância de livros. A funcionalidade de mover um livro para uma estante diferente funciona corretamente.
-        +Quando é feito refresh no navegador, a página continua exibindo as mesmas informações.
-
-
+###  Página principal 
+    A página principal exibe três estantes de livros, e cada livro é mostrado na estante correta.
+    A página principal exibe um controle que permite aos usuários mudar os livros de estante. O controle deve estar ligado a cada instância de livros. A funcionalidade de mover um livro para uma estante diferente funciona corretamente.
+    Quando é feito refresh no navegador, a página continua exibindo as mesmas informações.
 
 ## Lembrete:
 
