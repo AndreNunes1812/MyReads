@@ -1,6 +1,6 @@
 # Projeto MyReads
 
-Este projeto atende ao primeiro modulo do **Programa Nanodegree - Desenvolvimento React**.
+Este projeto atende ao primeiro modulo do **Programa Nanodegree - Desenvolvimento React** da Udacity.
 
 ## Objetivo
 
@@ -28,7 +28,7 @@ c) Buscas inválidas são cuidadas e resultados anteriores não são mostrados.<
 d) A pesquisa funciona corretamente quando um livro não possui um thumbnail ou um autor. (Para testar isto, pesquise por "poetry" e "biography").<br />
 e) O usuário consegue pesquisar com múltiplas palavras, tais como "artificial intelligence".
 
-#### Os resultados de busca permitem que um usuário categorize um livro como "Lendo Atualmente", "a Ler" ou "Lido"?
+#### Os resultados de busca permitem que um usuário categorize um livro como "Lendo Atualmente", "A Ler" ou "Lido"?
 
 1) Os resultados da página de busca permitem que os usuários selecionem "Lendo Atualmente", "A Ler" ou "Lido" e coloquem os livros na estante certa.
 
@@ -39,7 +39,7 @@ e) O usuário consegue pesquisar com múltiplas palavras, tais como "artificial 
 #### As seleções feitas na página de busca aparecem na página principal?
 Quando um livro é categorizado na página de busca e o usuário navega para a página principal, o livro aparece na respectiva estante da página principal.
 
-### Routing
+### Rotas
 #### A página principal conecta-se à página de busca?
 A página principal contém um link para a página de busca. Ao clicar neste link, a página de busca é exibida e a URL no endereço do navegador é /search.
 
@@ -141,7 +141,7 @@ A API de back-end usa um conjunto fixo de resultados de pesquisa em cache e é l
 
 ## Create React App
 
-Este projeto foi inicializado com o [Create React App](https://github.com/facebookincubator/create-react-app). Você pode encontrar mais informações sobre como executar tarefas comuns [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Este projeto foi inicializado com o [Create React App](https://github.com/facebookincubator/create-react-app). Você pode encontrar mais informações sobre como executar tarefas comuns [aqui](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Contribuição
 
