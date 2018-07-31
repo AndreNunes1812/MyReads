@@ -4,33 +4,33 @@ Este projeto atende ao primeiro modulo do **Programa Nanodegree - Desenvolviment
 
 ## Objetivo
 
-O sistema consiste em gerenciar livros em determinadas prateleira(s), ou seja, o(s) livro(s) podem estar nos seguites tipos: **lendo atualmente**, **quero ler** ou **lido**, o sistema oferece ainda uma pesquisa avançada de livros que podem ser adcionanda a(s) prateleira(s).
+O sistema consiste em gerenciar livros em determinadas prateleira(s), ou seja, o(s) livro(s) podem estar nos seguites estados: **lendo atualmente**, **quero ler** ou **lido**, o sistema oferece ainda uma pesquisa avançada de livros que podem ser adcionanda a(s) prateleira(s).
 
 ## Especificação do projeto:
 
-### Configuração do Projeto
-A aplicação foi criada com o create-react-app e exige apenas o npm install e npm start para  ser instalada e iniciada (ou com yarn).
+#### Configuração do Projeto
+A aplicação foi criada com o create-react-app e exige apenas o npm install e npm start para  ser instalada e iniciada (ou com yarn).<br />
 Um README atualizado que descreve o projeto e tem instruções para instalar e rodar o projeto estão incluídas no README.
 
 ####  Página principal 
 A página principal exibe três estantes de livros, e cada livro é mostrado na estante correta.
-A página principal exibe um controle que permite aos usuários mudar os livros de estante.
-O controle deve estar ligado a cada instância de livros. A funcionalidade de mover um livro para uma estante diferente funciona corretamente.
+A página principal exibe um controle que permite aos usuários mudar os livros de estante.<br />
+O controle deve estar ligado a cada instância de livros. A funcionalidade de mover um livro para uma estante diferente funciona corretamente.<br />
 Quando é feito refresh no navegador, a página continua exibindo as mesmas informações.
 
-### Página de busca
+#### Página de busca
 #### A página de busca tem um input de busca que permite que os usuários procurem por livros?
 1) A página de busca possui um campo de busca.
-2) A página de busca se comporta corretamente:
-a) Quando o usuário digita algo no campo de busca, os livros relacionados à sua busca são corretamente exibidos na página.
-b) Resultados de buscas não são mostrados quando todo o texto do input de pesquisa é deletado
-c) Buscas inválidas são cuidadas e resultados anteriores não são mostrados.
-d) A pesquisa funciona corretamente quando um livro não possui um thumbnail ou um autor. (Para testar isto, pesquise por "poetry" e "biography").
+2) A página de busca se comporta corretamente:<br />
+a) Quando o usuário digita algo no campo de busca, os livros relacionados à sua busca são corretamente exibidos na página.<br />
+b) Resultados de buscas não são mostrados quando todo o texto do input de pesquisa é deletado.<br />
+c) Buscas inválidas são cuidadas e resultados anteriores não são mostrados.<br />
+d) A pesquisa funciona corretamente quando um livro não possui um thumbnail ou um autor. (Para testar isto, pesquise por "poetry" e "biography").<br />
 e) O usuário consegue pesquisar com múltiplas palavras, tais como "artificial intelligence".
 
-#### Os resultados de busca permitem que um usuário categorize um livro como "currently reading", "want to read" ou "read"?
+#### Os resultados de busca permitem que um usuário categorize um livro como "Lendo Atualmente", "a Ler" ou "Lido"?
 
-1) Os resultados da página de busca permitem que os usuários selecionem "currently reading", "want to read" ou "read" e coloquem os livros na estante certa.
+1) Os resultados da página de busca permitem que os usuários selecionem "Lendo Atualmente", "A Ler" ou "Lido" e coloquem os livros na estante certa.
 
 2) Livros que não possuem uma estante possuem a marcação em "None" na lista de seleção.
 
