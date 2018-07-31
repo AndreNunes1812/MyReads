@@ -81,14 +81,13 @@ class BooksApp extends React.Component {
             this.setState({book : bookUp })           
         }
     })
-  }
-    
+  }    
 
   render() {
 
     return (
       <div className="app">
-
+      
         <Route exact path="/" render={ () => (
           <div>
             <ListBooks  onUpdateBooks={this.updateBooks} books={this.state.books.filter((book) => book.shelf == "currentlyReading")} titulo="Lendo Atualmente" viewHeads={this.state.viewHeads} />
