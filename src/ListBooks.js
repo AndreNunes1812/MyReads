@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import * as BooksAPI from './BooksAPI'
+import sortyBy from 'sort-by'
 
 class ListBooks extends Component {
 
@@ -66,6 +67,7 @@ class ListBooks extends Component {
 
     render() {  
         const { onUpdateBooks } = this.props
+        this.self.state.books.sort(sortyBy('title'))
         return (
             <div>  
                  {this.props.viewHeads ? (
@@ -88,10 +90,10 @@ class ListBooks extends Component {
                                                     <select id="lang" onChange={ (e)=> onUpdateBooks(book,e.target.value) }
                                                         value={book.shelf}>
                                                         <option value="move" disabled>Move to...</option>
-                                                        <option value="currentlyReading">Currently Reading</option>
-                                                        <option value="wantToRead">Want to Read</option>
-                                                        <option value="read">Read</option>
-                                                        <option value="none">None</option>
+                                                        <option value="currentlyReading">Lendo Atualmente</option>
+                                                        <option value="wantToRead">A Ler</option>
+                                                        <option value="read">Lido</option>
+                                                        <option value="none">Não Disponivel</option>
                                                     </select>
                                                 </div>
                                             </div>

@@ -3,7 +3,6 @@ import { debounce } from 'throttle-debounce';
 import { Link } from 'react-router-dom'
 import ListBooks from './ListBooks'
 import escapeRegExp from 'escape-string-regexp'
-import sortyBy from 'sort-by'
 import * as BooksAPI from './BooksAPI'
 
 class SearchBook extends Component {
@@ -46,7 +45,15 @@ class SearchBook extends Component {
                 try {
                     if (valor)  {
                         const match = new RegExp(escapeRegExp(valor) , 'i')
-                        this.self.setState({books: search.filter((book) => match.test(valor)) })
+                        this.self.setState({books: search.filter((book) => match.test(valor)) }, ()=>{
+                            const updatedBooks = this.self.state.books.map( (book) => {
+                                    return {
+                                        ...book,
+                                        shelf: 'none'
+                                      }                   
+                                })                                
+                                this.self.setState({books : updatedBooks })                
+                        }) 
                     }                    
                 }
                 catch (e) { this.self.setState({books: []})  }
@@ -67,7 +74,7 @@ class SearchBook extends Component {
             return book
           })
 
-          this.self.setState({books : updatedBooks }, (idNew)=>{
+          this.self.setState({books : updatedBooks }, ()=>{             
             this.onUpdate(updateShelf , id , updatedBooks, indice )
           })
     }
@@ -76,7 +83,7 @@ class SearchBook extends Component {
         this.setState({ query: event.target.value }, () => {
           this.searchDebounced(this.state.query);
         });
-      };
+    };
     
 
     updateBooks(bookNew , updateShelf) {
@@ -84,7 +91,7 @@ class SearchBook extends Component {
             if (book.id === bookNew.id ){
                let bookId = book.id;  
                BooksAPI.update(book , updateShelf )
-               .then((book) => {                  
+               .then(() => {                  
                     this.updateBookObject(updateShelf , bookId )
                }) 
             }
@@ -92,7 +99,7 @@ class SearchBook extends Component {
     }
 
     render() {
-            const { onUpdateBooks, onUpdate } = this.props   
+            //this.self.state.books.sort(sortyBy('title'))
             return (
             <div>
                 <div className="search-books">
@@ -101,7 +108,7 @@ class SearchBook extends Component {
                         <div className="search-books-input-wrapper">               
                             <input 
                                 type="text" 
-                                placeholder="Search by title or author"
+                                placeholder="Pesquisa por Titulo"
                                 value={this.state.query}
                                 onChange={ this.changeQuery }/>
                         </div>
