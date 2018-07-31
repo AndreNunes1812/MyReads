@@ -80,8 +80,7 @@ class ListBooks extends Component {
                                <h3 className="bookshelf-title">{ this.msg }</h3>      
                             ):('') }   
                             {this.state.books.map((book) =>(                                
-                                <li key={book.id} >  
-                                    <h3 className="bookshelf-title">{ book.shelf} </h3>                                       
+                                <li key={book.id} >                       
                                     <div className="book">
                                         <div className="book-top">
                                             <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${ this.validatePhoto(book) })` }}></div>
