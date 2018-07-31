@@ -92,6 +92,15 @@ Foi disponibilizado um modelo do projeto contendo informações basicas de layou
 
 Uma boa pratica é documentar todo(s) arquivo(s) criado(s) dentro da estrutura informada acima.
 
+## Recursos Utilizados:
+### Expressões regulares:
+São padrões utilizados para selecionar combinações de caracteres em uma string. Em JavaScript, expressões regulares também são objetos.<br />
+Elas podem ser utilizadas com os métodos exec e test do objeto RegExp, e com os métodos match, replace, search, e split do objeto String. Este capítulo descreve o uso de expressões regulares em JavaScript.[`aqui`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+### Debounce:
+O Debounce, assim como o throttle, limita a quantidade de vezes que um determinado trecho de código é executado em relação ao tempo. Mas diferentemente do throttle — que assegura que aconteçam no máximo 1 execução a cada X milisegundos —, o debounce irá postergar a execução do código caso ele seja invocado novamente em menos de X segundos.
+[`aqui`](https://www.npmjs.com/package/debounce)
+
 ## Pesquisa de Livro(s)
 
 Para simplificar o desenvolvimento da pesquisa foi fornecida uma API **BOOKSAPI** para integrar ao projeto, conforme descrito abaixo em *inglês*.
