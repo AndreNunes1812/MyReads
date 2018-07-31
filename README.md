@@ -8,7 +8,7 @@ O sistema consiste em gerenciar livros em determinadas prateleira(s), ou seja, o
 
 ## Especificação do projeto:
 
-#### Configuração do Projeto
+### Configuração do Projeto
 A aplicação foi criada com o create-react-app e exige apenas o npm install e npm start para  ser instalada e iniciada (ou com yarn).
 Um README atualizado que descreve o projeto e tem instruções para instalar e rodar o projeto estão incluídas no README.
 
@@ -17,6 +17,46 @@ A página principal exibe três estantes de livros, e cada livro é mostrado na 
 A página principal exibe um controle que permite aos usuários mudar os livros de estante.
 O controle deve estar ligado a cada instância de livros. A funcionalidade de mover um livro para uma estante diferente funciona corretamente.
 Quando é feito refresh no navegador, a página continua exibindo as mesmas informações.
+
+### Página de busca
+#### A página de busca tem um input de busca que permite que os usuários procurem por livros?
+1) A página de busca possui um campo de busca.
+2) A página de busca se comporta corretamente:
+a) Quando o usuário digita algo no campo de busca, os livros relacionados à sua busca são corretamente exibidos na página.
+b) Resultados de buscas não são mostrados quando todo o texto do input de pesquisa é deletado
+c) Buscas inválidas são cuidadas e resultados anteriores não são mostrados.
+d) A pesquisa funciona corretamente quando um livro não possui um thumbnail ou um autor. (Para testar isto, pesquise por "poetry" e "biography").
+e) O usuário consegue pesquisar com múltiplas palavras, tais como "artificial intelligence".
+
+#### Os resultados de busca permitem que um usuário categorize um livro como "currently reading", "want to read" ou "read"?
+
+1) Os resultados da página de busca permitem que os usuários selecionem "currently reading", "want to read" ou "read" e coloquem os livros na estante certa.
+
+2) Livros que não possuem uma estante possuem a marcação em "None" na lista de seleção.
+
+3) Livros que já estão na estante possuem a marcação em sua respectiva estante da lista de seleção.
+
+#### As seleções feitas na página de busca aparecem na página principal?
+Quando um livro é categorizado na página de busca e o usuário navega para a página principal, o livro aparece na respectiva estante da página principal.
+
+### Routing
+#### A página principal conecta-se à página de busca?
+A página principal contém um link para a página de busca. Ao clicar neste link, a página de busca é exibida e a URL no endereço do navegador é /search.
+
+A página de busca é exibida corretamente ao entrar na página inserindo /search diretamente na URL do projeto no navegador.
+
+#### A página de busca conecta-se de volta à página principal?
+A página de busca contém um link para a página principal. Ao clicar neste link, a página principal é exibida e a URL no endereço do navegador é /.
+
+### Funcionalidade do código
+#### O código do projeto lida com o gerenciamento de estado de forma adequada?
+O estado componente é passado dos componentes pais para os filhos. A variável de estado não é modificada diretamente - a função setState() é usada de forma correta.
+
+Os livros possuem o mesmo estado tanto na página de busca como na página principal da aplicação: se um livro está na estante, isso é refletido nos dois locais.
+
+#### O JSX é formatado de maneira adequada?
+Todos os códigos JSX são formatados de maneira adequada e funcional.
+
 
 #### Lembrete:
 
@@ -50,9 +90,9 @@ Foi disponibilizado um modelo do projeto contendo informações basicas de layou
 
 Uma boa pratica é documentar todo(s) arquivo(s) criado(s) dentro da estrutura informada acima.
 
-## Pesquisas dos Livros
+## Pesquisa de Livro(s)
 
-Para simplificar o desenvolvimento da Pesquisa de livros foi fornecida uma API **BOOKSAPI**, conforme descrita abaixo em *inglês*.
+Para simplificar o desenvolvimento da pesquisa foi fornecida uma API **BOOKSAPI** para integrar ao projeto, conforme descrito abaixo em *inglês*.
 
 We've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
 
@@ -101,9 +141,9 @@ A API de back-end usa um conjunto fixo de resultados de pesquisa em cache e é l
 
 ## Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Este projeto foi inicializado com o [Create React App](https://github.com/facebookincubator/create-react-app). Você pode encontrar mais informações sobre como executar tarefas comuns [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Contributing
+## Contribuição
 
 Esté repositório é para atender os alunos da Udacity
 para maiores detalhes, clique aqui [CONTRIBUTING.md](CONTRIBUTING.md).
